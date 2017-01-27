@@ -1,0 +1,22 @@
+group 'com.zelalem'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+
+    compile (
+            'org.springframework:spring-webmvc:4.3.4.RELEASE',
+            'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:1.2.9',
+            'org.thymeleaf:thymeleaf-spring4:2.1.4.RELEASE'
+    )
+}
